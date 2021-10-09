@@ -9,10 +9,11 @@ PRODUCT_TYPE_CHOICES = [
 ]
 
 
-class Products(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+class Product(models.Model):
+    code = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
     description = models.TextField()
     type = models.CharField(
         max_length=255, choices=PRODUCT_TYPE_CHOICES)
-    sale_value = models.FloatField()
+    supplier_value = models.FloatField()
     stock_quantity = models.IntegerField()

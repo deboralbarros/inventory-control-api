@@ -1,6 +1,6 @@
 from django_filters import rest_framework as filters
 
-from .models import Products, PRODUCT_TYPE_CHOICES
+from .models import Product, PRODUCT_TYPE_CHOICES
 
 
 class ProductFilter(filters.FilterSet):
@@ -9,5 +9,5 @@ class ProductFilter(filters.FilterSet):
         field_name='description', lookup_expr='icontains')
 
     class Meta:
-        model = Products
+        model = Product
         fields = ['type', 'description']
