@@ -7,3 +7,8 @@ from .models import Products
 class ListCreateProductView(ListCreateAPIView):
     queryset = Products.objects.all()
     serializer_class = ProductSerializer
+
+
+class RetrieveUpdateDestroyProductView(RetrieveUpdateDestroyAPIView):
+    queryset = Products.objects.all()
+    serializer_class = ProductSerializer
