@@ -12,7 +12,7 @@ PRODUCT_TYPE_CHOICES = [
 class Products(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     description = models.TextField()
-    productType = models.CharField(
+    type = models.CharField(
         max_length=255, choices=PRODUCT_TYPE_CHOICES)
     sale_value = models.FloatField()
     stock_quantity = models.IntegerField()
