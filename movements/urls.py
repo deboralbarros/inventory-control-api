@@ -4,5 +4,5 @@ from .views import ListCreateMovementView
 
 
 urlpatterns = [
-    path('movements/', ListCreateMovementView.as_view())
+    path('', ListCreateMovementView.as_view())
 ]
