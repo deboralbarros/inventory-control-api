@@ -20,6 +20,7 @@ class MovementSerializer(serializers.Serializer):
 
 
 class MovementSerializerOut(serializers.Serializer):
+    id = serializers.IntegerField()
     product = ProductSerializer()
     type = serializers.CharField()
     sale_value = serializers.FloatField()
